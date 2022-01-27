@@ -1,0 +1,13 @@
+Bonjour ceci est un texte d'exemple avec des phrases qu'il faut changer.
+
+le chat le chat
+
+une poutine
+
+une ligne de texte qui a pas d'importance
+
+le chat
+
+encore une ligne mais qui contient le chat dedant
+
+voici la fin du texte.
