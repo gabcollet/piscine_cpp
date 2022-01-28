@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:06:17 by gcollet           #+#    #+#             */
-/*   Updated: 2022/01/27 17:09:54 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/01/28 11:31:54 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Karen{
 public:
 		Karen();
 		void complain(std::string level);
+		void (Karen::*functionPointer[4])(void);
 		~Karen();
 private:
 		void debug(void);

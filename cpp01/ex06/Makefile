@@ -6,11 +6,11 @@
 #    By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/26 15:43:41 by gcollet           #+#    #+#              #
-#    Updated: 2022/01/28 12:00:28 by gcollet          ###   ########.fr        #
+#    Updated: 2022/01/28 12:19:20 by gcollet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PROG	= karen
+PROG	= karenFilter
 
 OBJPATH = obj/
 
@@ -27,7 +27,7 @@ all:	$(OBJPATH) ${PROG}
 
 ${PROG}:	${OBJS}
 					@$(CC) ${OBJS} -o ${PROG}
-					@echo "\n\033[32m\033[1mUnleash the Karen!!!\n\033[0m"
+					@echo "\n\033[32m\033[1mMute the Karen!\n\033[0m"
 
 ${OBJPATH}%.o:%.cpp
 					@gcc ${CFLAGS} ${HEADER} -o $@ -c $<

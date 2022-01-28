@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 17:06:29 by gcollet           #+#    #+#             */
-/*   Updated: 2022/01/28 12:21:08 by gcollet          ###   ########.fr       */
+/*   Created: 2022/01/27 17:06:17 by gcollet           #+#    #+#             */
+/*   Updated: 2022/01/28 17:57:36 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#ifndef __KAREN_H__
+#define __KAREN_H__
 
-int main()
-{
-	Karen karen;
-	karen.complain("DEBUG");
-	karen.complain("INFO");
-	karen.complain("WARNING");
-	karen.complain("ERROR");
-	return (0);
-}
+#include <iostream>
+
+class Karen{
+	
+public:
+		Karen();
+		void complain(std::string level);
+		~Karen();
+private:
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
+		std::string _level[4];
+};
+
+#endif // __KAREN_H__
