@@ -5,29 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/31 10:15:51 by gcollet           #+#    #+#              #
-#    Updated: 2022/02/02 10:54:06 by gcollet          ###   ########.fr        #
+#    Created: 2022/02/02 10:56:14 by gcollet           #+#    #+#              #
+#    Updated: 2022/02/02 17:23:00 by gcollet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PROG	= ex00
+PROG	= ex03
 
 OBJPATH = obj/
 
-SRCS 	= main.cpp Fixed.cpp
-
+SRCS 	= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJFILES = $(SRCS:.cpp=.o)
 OBJS 	= $(addprefix $(OBJPATH), $(OBJFILES)) 
 VPATH   = ./
 
 CC 		= clang++
-CFLAGS 	= -Wall -Wextra -Werror -std=c++98
+CFLAGS 	= -Wall -Wextra -Werror -Wshadow -std=c++98
 
 all:	$(OBJPATH) ${PROG}
 
 ${PROG}:	${OBJS}
 					@$(CC) ${OBJS} -o ${PROG}
-					@echo "\n\033[32m\033[1mCompiled!\n\033[0m"
+					@echo "\n\033[32m\033[1mOh no! A monster!\n\033[0m"
 
 ${OBJPATH}%.o:%.cpp
 					@gcc ${CFLAGS} ${HEADER} -o $@ -c $<
