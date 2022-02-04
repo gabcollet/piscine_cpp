@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 10:21:13 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/03 11:18:18 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/04 14:59:42 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat(): Animal()
 	std::cout << "Cat Constructor has been called." << std::endl;
 }
 
-Cat::Cat(const Cat& src)
+Cat::Cat(const Cat& src): Animal()
 {
 	std::cout << "Cat Copy constructor has been called." << std::endl;
 	*this = src;
@@ -48,9 +48,4 @@ Cat& Cat::operator=(const Cat& src)
 void Cat::makeSound() const
 {
 	std::cout << "Miaw miaw!" << std::endl;
-}
-
-std::string Cat::getType() const
-{
-	return _Type;
 }

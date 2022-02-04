@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 14:38:25 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/03 14:41:28 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/04 15:01:31 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ WrongCat::WrongCat(): WrongAnimal()
 	std::cout << "WrongCat Constructor has been called." << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat& src)
+WrongCat::WrongCat(const WrongCat& src): WrongAnimal()
 {
 	std::cout << "WrongCat Copy constructor has been called." << std::endl;
 	*this = src;
@@ -47,10 +47,5 @@ WrongCat& WrongCat::operator=(const WrongCat& src)
 
 void WrongCat::makeSound() const
 {
-	std::cout << "Miaw miaw!" << std::endl;
-}
-
-std::string WrongCat::getType() const
-{
-	return _Type;
+	std::cout << "Wrong miaw!" << std::endl;
 }

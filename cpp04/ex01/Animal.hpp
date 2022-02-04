@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 10:17:01 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/03 11:17:33 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/04 13:15:58 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 		Animal(); // Constructeur par défaut
         Animal(const Animal&); // Constructeur de recopie
         Animal(std::string&); // String Constructeur
-        ~Animal(); // Destructeur éventuellement virtuel
+        virtual ~Animal(); // Destructeur éventuellement virtuel
         Animal &operator=(const Animal&); // Operator d'affectation
 
 		virtual void makeSound() const;

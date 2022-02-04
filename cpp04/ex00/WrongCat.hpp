@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 14:36:52 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/03 14:41:37 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/04 15:01:10 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ public:
         WrongCat &operator=(const WrongCat&); // Operator d'affectation
 
 		void makeSound() const;
-		std::string getType() const;
 private:
 
 };

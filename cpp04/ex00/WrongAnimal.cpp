@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 14:39:56 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/03 14:43:59 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/04 15:01:42 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& src)
 
 void WrongAnimal::makeSound() const
 {
-	std::cout << "Random Animal noise!" << std::endl;
+	std::cout << "Wrong Animal noise!" << std::endl;
 }
 
 std::string WrongAnimal::getType() const

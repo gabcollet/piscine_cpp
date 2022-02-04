@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 10:17:10 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/03 11:17:37 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/04 15:00:27 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ public:
         Dog &operator=(const Dog&); // Operator d'affectation
 
 		virtual void makeSound() const;
-		std::string getType() const;
 private:
 
 };

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 14:36:56 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/03 14:43:33 by gcollet          ###   ########.fr       */
+/*   Created: 2022/02/03 10:17:01 by gcollet           #+#    #+#             */
+/*   Updated: 2022/02/04 14:23:42 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __WRONGANIMAL_H__
-#define __WRONGANIMAL_H__
+#ifndef __ANIMAL_H__
+#define __ANIMAL_H__
 
 #include <iostream>
 
-class WrongAnimal{
+class Animal{
 	
 public:
-		WrongAnimal(); // Constructeur par défaut
-        WrongAnimal(const WrongAnimal&); // Constructeur de recopie
-        WrongAnimal(std::string&); // String Constructeur
-        ~WrongAnimal(); // Destructeur éventuellement virtuel
-        WrongAnimal &operator=(const WrongAnimal&); // Operator d'affectation
+		Animal(); // Constructeur par défaut
+        Animal(const Animal&); // Constructeur de recopie
+        Animal(std::string&); // String Constructeur
+        virtual ~Animal(); // Destructeur éventuellement virtuel
+        Animal &operator=(const Animal&); // Operator d'affectation
 
-		void makeSound() const;
+		virtual void makeSound() const = 0;
 		std::string getType() const;
 protected:
 		std::string _Type;
 };
 
-#endif // __WRONGANIMAL_H__
+#endif // __ANIMAL_H__
