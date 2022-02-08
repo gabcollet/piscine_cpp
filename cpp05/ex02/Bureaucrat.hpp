@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 16:03:07 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/07 12:51:36 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/08 11:53:57 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 #define __BUREAUCRAT_H__
 
 #include <iostream>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat{
 	
 public:
 		Bureaucrat(); // Constructeur par défaut
         Bureaucrat(const Bureaucrat&); // Constructeur de recopie
-		Bureaucrat(const std::string, int);
+		Bureaucrat(const std::string name, int grade);
         ~Bureaucrat(); // Destructeur éventuellement virtuel
         Bureaucrat &operator=(const Bureaucrat&); // Operator d'affectation
 
@@ -28,6 +31,8 @@ public:
 		int getGrade() const;
 		void incrementGrade();
 		void decrementGrade();
+		void signForm(Form&) const;
+		void executeForm(Form const & form);
 
 		//https://www.geeksforgeeks.org/exceptionwhat-in-c-with-examples/
 		class GradeTooHighException: public std::exception{

@@ -6,15 +6,15 @@
 #    By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/04 16:01:44 by gcollet           #+#    #+#              #
-#    Updated: 2022/02/07 14:05:37 by gcollet          ###   ########.fr        #
+#    Updated: 2022/02/08 14:36:41 by gcollet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PROG	= ex00
+PROG	= ex03
 
 OBJPATH = obj/
 
-SRCS 	= main.cpp Bureaucrat.cpp
+SRCS 	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 OBJFILES = $(SRCS:.cpp=.o)
 OBJS 	= $(addprefix $(OBJPATH), $(OBJFILES)) 
 VPATH   = ./
@@ -37,6 +37,7 @@ clean:
 fclean: 	clean
 					@rm -rf ${OBJPATH}
 					@rm -f ${PROG}
+					@rm *_shrubbery
 
 re:			fclean all
 
