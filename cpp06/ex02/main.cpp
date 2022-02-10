@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 13:47:56 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/10 14:43:00 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/10 16:14:59 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,22 @@ void identify(Base& p)
 		static_cast<void>(dynamic_cast<A&>(p));
 		std::cout << "A" << std::endl;
 	}
-	catch (std::bad_cast &bc){
-		std::cout << bc.what() << " to A" << std::endl;
+	catch (std::exception &bc){
+		std::cout << "bad cast to A" << std::endl;
 	}
 	try{
 		static_cast<void>(dynamic_cast<B&>(p));
 		std::cout << "B" << std::endl;
 	}
-	catch (std::bad_cast &bc){
-		std::cout << bc.what() << " to B" << std::endl;
+	catch (std::exception &bc){
+		std::cout << "bad cast to B" << std::endl;
 	}
 	try{
 		static_cast<void>(dynamic_cast<C&>(p));
 		std::cout << "C" << std::endl;
 	}
-	catch (std::bad_cast &bc){
-		std::cout << bc.what() << " to C" << std::endl;
+	catch (std::exception &bc){
+		std::cout << "bad cast to C" << std::endl;
 	}
 }
 

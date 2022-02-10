@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 13:41:48 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/10 14:35:33 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/10 16:13:43 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #include <ctime>
 #include <cstdlib>
 #include <exception>
-#include <typeinfo>
 
 class Base{
 	
