@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:10:25 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/09 17:39:09 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/10 09:10:30 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,15 +59,15 @@ void Convert::initRightType(char* argv)
 {
 	switch(parsing(argv)){
 		case 0:
-			_float = atof(argv);
+			_float = std::atof(argv);
 			castFromFloat();
 			break;
 		case 1:
-			_double = atof(argv);
+			_double = std::atof(argv);
 			castFromDouble();
 			break;
 		case 2:
-			_int = atoi(argv);
+			_int = std::atoi(argv);
 			castFromInt();
 			break;
 		case 3:

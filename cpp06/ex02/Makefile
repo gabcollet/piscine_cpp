@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/02/09 11:14:12 by gcollet           #+#    #+#              #
-#    Updated: 2022/02/10 09:49:10 by gcollet          ###   ########.fr        #
+#    Created: 2022/02/10 13:40:56 by gcollet           #+#    #+#              #
+#    Updated: 2022/02/10 13:47:35 by gcollet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PROG	= ex00
+PROG	= ex02
 
 OBJPATH = obj/
 
-SRCS 	= main.cpp Convert.cpp
+SRCS 	= main.cpp Base.cpp A.cpp B.cpp C.cpp
 OBJFILES = $(SRCS:.cpp=.o)
 OBJS 	= $(addprefix $(OBJPATH), $(OBJFILES)) 
 VPATH   = ./

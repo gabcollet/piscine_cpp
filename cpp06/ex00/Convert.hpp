@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:06:12 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/09 17:36:35 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/10 09:11:57 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <climits>
+#include <cstdlib>
 #include <iomanip>
 
 class Convert{
