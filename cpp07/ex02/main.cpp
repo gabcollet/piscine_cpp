@@ -6,32 +6,72 @@
 /*   By: gcollet <gcollet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 19:27:07 by gcollet           #+#    #+#             */
-/*   Updated: 2022/02/14 19:41:46 by gcollet          ###   ########.fr       */
+/*   Updated: 2022/02/15 14:29:17 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
-int main()
-{
-	
+template <typename T>
+void displayArray(Array<T> &arr){
+	std::cout << "The array contains: " << std::endl;
+	for (size_t i=0; i < arr.size(); i++)
+		std::cout << arr[i] << std::endl;
+	std::cout << std::endl;
 }
 
-/* Write a class template Array that contains elements of type T and that allows the
-following behavior:
-• Construction with no parameter: creates an empty array.
-• Construction with an unsigned int n as a parameter: creates an array of n ele-
-ments, initialized by default. (Tip: try to compile int * a = new int();, then
-display *a.)
+struct s_complex{
+	int a;
+	char b;
+	float c;
+} t_complex;
 
-• Construction by copy and assignment operator. In both cases, modifying one of
-the two arrays after copy/assignment won’t affect anything in the other array.
+int main()
+{
+	std::cout << "Construction with no parameter" << std::endl << "------------------------------" << std::endl;
+	Array<int> intArray;
+	displayArray(intArray);
 
-• You MUST use the operator new[] for your allocation. You must not do preventive
-allocation. Your code must never access non allocated memory.
-• Elements are accessible through the operator[].
-• When accessing an element with the operator[], if this element is out of the limits,
-a std::exception is thrown.
-• A member function size that returns the number of elements in the array. This
-member function takes no parameter and does not modify the current instance in
-any way. */
+	std::cout << "Construction with an unsigned int = 5" << std::endl << "------------------------------" << std::endl;
+	Array<unsigned int> uintArray(5);
+	for (size_t i=0; i < uintArray.size(); i++)
+		uintArray[i] = i;
+	displayArray(uintArray);
+
+	std::cout << "Construction by copy and assignment operator" << std::endl << "------------------------------" << std::endl;
+	Array<unsigned int> uintArray2(5);
+	uintArray2 = uintArray;
+	displayArray(uintArray2);
+	std::cout << "ADDING +1 to the original array" << std::endl;
+	for (size_t i=0; i < uintArray.size(); i++)
+		uintArray[i] = i + 1;
+	std::cout << "ORIGINAL:" << std::endl;
+	displayArray(uintArray);
+	std::cout << "COPY:" << std::endl;
+	displayArray(uintArray2);
+
+	std::cout << "Accessing off limit" << std::endl << "------------------------------" << std::endl;
+	try{
+		uintArray[6];
+		displayArray(uintArray);
+	}
+	catch(std::exception &e){
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+
+	std::cout << "Array of complex types" << std::endl << "------------------------------" << std::endl;
+	
+	Array<s_complex> complexArray(5);
+	int a;
+	char b;
+	float c;
+	std::cout << "The array contains: " << std::endl;
+	for (size_t i=0; i < complexArray.size(); i++)
+	{
+		a = complexArray[i].a;
+		b = complexArray[i].b;
+		c = complexArray[i].c;
+		std::cout << "(" << a << ", " << b << ", " << c << ")" << std::endl;
+	}
+}
